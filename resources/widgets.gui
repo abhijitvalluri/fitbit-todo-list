@@ -1,0 +1,14 @@
+<!-- widgets.gui -->
+<svg>
+  <defs>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="import" href="/mnt/sysassets/widgets_common.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.gui"/>
+    <link rel="import" href="/mnt/sysassets/widgets/scrollview_widget.gui"/>
+    <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.gui"/>
+    <link rel="import" href="/mnt/sysassets/widgets/checkbox_tile_widget.gui" />
+    <link rel="stylesheet" href="/mnt/sysassets/widgets/dynamic_textarea.css"/>
+    <link rel="import" href="/mnt/sysassets/widgets/dynamic_textarea.gui"/>
+    <link rel="import" href="/mnt/sysassets/widgets/mixed_text_widget.gui"/>
+  </defs>
+</svg>

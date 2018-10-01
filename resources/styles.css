@@ -1,0 +1,92 @@
+/* styles.css */
+/* We separate list items with a 2px rect.
+ * Make sure to set
+ */
+.list-separator {
+ x: 0;
+ y: 100%-2;
+ width: 100%;
+ height: 2;
+ fill: fb-extra-dark-gray;
+}
+
+text {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  y: 12;
+  text-length: 32;
+}
+
+textarea {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  y: 12;
+  text-length: 1024;
+}
+
+.emptyList {
+  display: inline;
+}
+
+#listNumber {
+  text-anchor: middle;
+  x: 100%-26;
+  y: 20;
+  font-size: 20;
+  text-length: 5;
+  fill: #eeeeee;
+}
+
+#timeOfDay {
+  text-anchor: end;
+  font-size: 20;
+  x: 100%-5;
+  y: 7%;
+  fill: white;
+}
+
+#battery {
+  text-anchor: start;
+  font-size: 20;
+  x: 40;
+  y: 7%;
+  fill: white;
+}
+
+#batteryIcon {
+  x: 5;
+  y: 1%;
+}
+
+#batteryIconOverlay {
+  y: 8;
+  height: 14;
+  fill: black;
+}
+
+#batteryRedLine {
+  x: 8;
+  y: 9;
+  height: 12;
+  width: 2;
+  fill: red;
+  display: none;
+}
+
+#appTitle {
+  text-anchor: middle;
+  font-size: 20;
+  x: 50%;
+  y: 7%;
+  fill: white;
+}
+
+#headerOverlay {
+  width: 100%;
+  height: 10%;
+  x: 0;
+  y: 0;
+  fill: black;
+}

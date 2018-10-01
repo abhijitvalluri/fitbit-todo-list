@@ -1,0 +1,19 @@
+{
+  "fitbit": {
+    "appUUID": "6f99b4c4-3861-4df2-ab82-dffc655afb42",
+    "appType": "app",
+    "appDisplayName": "To Do List",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#2196f3",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson",
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "To Do List"
+      }
+    }
+  }
+}
