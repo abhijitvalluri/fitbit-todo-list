@@ -1,4 +1,12 @@
 {
+  "name": "todolist",
+  "version": "1.0.7",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~1.0.2",
+    "@fitbit/sdk-cli": "^1.0.1"
+  },
   "fitbit": {
     "appUUID": "6f99b4c4-3861-4df2-ab82-dffc655afb42",
     "appType": "app",
@@ -15,5 +23,9 @@
         "name": "To Do List"
       }
     }
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
   }
 }
