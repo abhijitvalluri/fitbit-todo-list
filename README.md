@@ -3,11 +3,9 @@
 
 This is the source code for the Fitbit OS app "To Do List".
 
-![Fitbit Ionic empty screen](https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/ionic_empty.png "Fitbit Ionic empty screen")
-![Fitbit Ionic To do list screen](https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/ionic_list.png "Fitbit Ionic To do list screen")
-
-![Fitbit Versa empty screen](https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/versa_empty.png "Fitbit Versa empty screen")
-![Fitbit Versa To do list screen](https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/versa_list.png "Fitbit Versa To do list screen")
+<img src="https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/ionic_empty.png" width=200 alt="Fitbit Ionic empty screen" title="Fitbit Ionic empty screen"> <img src="https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/ionic_list.png" width=200 alt="Fitbit Ionic To do list screen" title="Fitbit Ionic To do list screen">
+<br />
+<img src="https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/versa_empty.png" width=200 alt="Fitbit Versa empty screen" title="Fitbit Versa empty screen"> <img src="https://raw.githubusercontent.com/abhijitvalluri/fitbit-todo-list/master/docs/versa_list.png" width=200 alt="Fitbit Versa To do list screen" title="Fitbit Versa To do list screen">
 
 ## Sideload
 You can sideload the compiled app (`app.fba` file) found under the `build` directory.
