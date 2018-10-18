@@ -86,24 +86,23 @@ let populateList = function (listData) {
     else {
         emptyListHelp.style.display = "none";
     }
-    var NUM_ELEMS = listData.length;
-    if (checkedState.length !== listData.length) {
-        mergeNewLoadedListWithStoredList(listData);
-    }
-    var jsonListState = {
+    let NUM_ELEMS = listData.length;
+    mergeNewLoadedListWithStoredList(listData);
+
+    let jsonListState = {
         "listData": listData,
         "checkedState": checkedState
     };
     fs.writeFileSync("listState.txt", jsonListState, "json");
     try {
-        var stats = fs.statSync("listState.txt");
-        var storedListState = fs.readFileSync("listState.txt", "json");
+        let stats = fs.statSync("listState.txt");
+        let storedListState = fs.readFileSync("listState.txt", "json");
     }
     catch (err) {
     }
     VTList.delegate = {
         getTileInfo: function (index) {
-            var tile_type = "colour-pool";
+            let tile_type = "colour-pool";
             return { type: tile_type,
                 color: itemColor, //s[index % NUM_COLORS],
                 index: index, };
@@ -113,9 +112,9 @@ let populateList = function (listData) {
                 tile.getElementById('bg').style.fill = info.color;
                 tile.getElementById('title-text').text = listData[info.index]["name"];
                 tile.index = info.index;
-                var checkbox_1 = tile.getElementById('checkbox');
-                var titletext_1 = tile.getElementById('title-text');
-                var listNumber = tile.getElementById('listNumber');
+                let checkbox_1 = tile.getElementById('checkbox');
+                let titletext_1 = tile.getElementById('title-text');
+                let listNumber = tile.getElementById('listNumber');
                 listNumber.text = tile.index + 1;
                 checkbox_1.value = checkedState[info.index];
                 titletext_1.style.fill = checkedState[info.index] === 0 ? itemUncheckedColor : itemCheckedColor;
@@ -156,15 +155,16 @@ let populateList = function (listData) {
 };
 
 function createCheckedStateHashMap(listData) {
-    for (var i = 0; i !== listData.length; i++) {
+    for (let i = 0; i !== listData.length; i++) {
         checkedStateMap[listData[i]["name"]] = checkedState[i];
     }
 }
+
 function mergeNewLoadedListWithStoredList(listData) {
-    var newCheckedState = [];
-    var newCheckedStateMap = {};
-    for (var i = 0; i !== listData.length; i++) {
-        var key = listData[i]["name"];
+    let newCheckedState = [];
+    let newCheckedStateMap = {};
+    for (let i = 0; i !== listData.length; i++) {
+        let key = listData[i]["name"];
         if (key in checkedStateMap) {
             newCheckedState.push(checkedStateMap[key]);
             newCheckedStateMap[key] = checkedStateMap[key];
@@ -177,9 +177,10 @@ function mergeNewLoadedListWithStoredList(listData) {
     checkedState = newCheckedState;
     checkedStateMap = newCheckedStateMap;
 }
+
 try {
-    var stats = fs.statSync("listState.txt");
-    var storedListState = fs.readFileSync("listState.txt", "json");
+    let stats = fs.statSync("listState.txt");
+    let storedListState = fs.readFileSync("listState.txt", "json");
     if (storedListState.listData !== undefined && storedListState.listData.length !== 0) {
         checkedState = storedListState.checkedState;
         createCheckedStateHashMap(storedListState.listData);
@@ -187,14 +188,16 @@ try {
     }
 }
 catch (err) {
-    var jsonListState = { "listData": [], "checkedState": [] };
+    let jsonListState = { "listData": [], "checkedState": [] };
     fs.writeFileSync("listState.txt", jsonListState, "json");
-    var storedListData = fs.readFileSync("listState.txt", "json");
+    let storedListData = fs.readFileSync("listState.txt", "json");
 }
-var lastProcessedSettingTime = 0;
+
+let lastProcessedSettingTime = 0;
+
 function loadTodos() {
     try {
-        var todos = fs.readFileSync("todoItems.cbor", "cbor");
+        let todos = fs.readFileSync("todoItems.cbor", "cbor");
         if (lastProcessedSettingTime < todos.timestamp) {
             lastProcessedSettingTime = todos.timestamp;
             if (todos.todo !== undefined & todos.todo.length !== undefined) {
