@@ -6,13 +6,13 @@
          to="Please add items to the to do list from this app's settings in the Fitbit app."/>
   </use>
   <!-- Create a tile-list-item that can be re-used, with a simple
-    -- coloured background.
-    -- Things to note:
-    --  - display='none': Tile list items need to be hidden by default!
+       coloured background.
+       Things to note:
+        - display='none': Tile list items need to be hidden by default!
     -->
   <symbol id='colour-item' href='#tile-list-item' class="tile-item" height='50' display='none' focusable="false" pointer-events="visible" system-events="all">
     <!-- We put this in a transform so that way the elements inside
-      -- can be animated by the List container when shown / hidden. -->
+         can be animated by the List container when shown / hidden. -->
     <g id='transform'>
       <rect id='bg' height='100%' width='100%' />
       <use id="checkbox" href="#checkbox-tile" />
@@ -20,29 +20,30 @@
       <textarea id='title-text' rows="2" text-overflow="ellipsis" fill='white' y='5' x='5' width='83%' />
       <!-- Visual separator between tiles -->
       <rect id='tile-divider-bottom' class='list-separator' />
+      <rect id='tile-divider-bottom-black' class='list-separator-black' />
     </g>
   </symbol>
-  
+
   <symbol id='separate-item' href='#tile-list-item' height='5' display='none'>
     <rect id='bg' height='100%' width='100%' fill='black' />
     <rect id='tile-divider-bottom' class='list-separator' />
   </symbol>
-  
+
   <use id='my-tile-list' href='#tile-list' width="100%" height="90%" x="0%" y="10%">
     <!-- We need to mark this as a VirtualTileList -->
     <var id='virtual' value='1' />
-    
+
     <!-- Each of our tiles have the 2px 'tile-divider-bottom'.
-      -- In order to properly calculate offsets when scrolling,
-      -- we need to tell the tile list how tall our separator is. -->
+         In order to properly calculate offsets when scrolling,
+         we need to tell the tile list how tall our separator is. -->
     <var id='separator-height-bottom' value='2'/>
 
     <!-- The item pools may each only contain a single type of
-      -- tile, and each pool should contain at least enough tiles
-      -- to fit on screen. For smoother scrolling, more are
-      -- recommended.
-      -- In this case, we can fit a maximum of 300/50 = 6 on screen
-      -- so we will keep 10 tiles in each pool. -->
+         tile, and each pool should contain at least enough tiles
+         to fit on screen. For smoother scrolling, more are
+         recommended.
+         In this case, we can fit a maximum of 300/50 = 6 on screen
+         so we will keep 10 tiles in each pool. -->
     <use id='colour-pool' href='#tile-list-pool'>
       <use id='colour-pool[1]' href='#colour-item' />
       <use id='colour-pool[2]' href='#colour-item' />
@@ -64,7 +65,7 @@
   <image href="rounded_corner_top_right_mask.png" x="100%-13" y="10%" height="13" width="13"/>
   <image href="rounded_corner_bottom_left_mask.png" x="0" y="100%-13" height="13" width="13"/>
   <image href="rounded_corner_bottom_right_mask.png" x="100%-13" y="100%-13" height="13" width="13"/>
-  
+
   <rect id="headerOverlay" />
   <text id="timeOfDay">9:00 AM</text>
   <image id="batteryIcon" height="24" width="32" href="battery.png" />

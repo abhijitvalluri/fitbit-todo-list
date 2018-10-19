@@ -23,6 +23,14 @@
  fill: fb-extra-dark-gray;
 }
 
+.list-separator-black {
+  x: 0;
+  y: 100%-2;
+  width: 100%;
+  height: 2;
+  fill: black;
+ }
+
 text {
   font-size: 32;
   font-family: System-Regular;
