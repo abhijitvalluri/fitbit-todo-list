@@ -1,11 +1,11 @@
 {
   "name": "todolist",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "~1.0.2",
-    "@fitbit/sdk-cli": "^1.0.1"
+    "@fitbit/sdk": "~4.1.0",
+    "@fitbit/sdk-cli": "^1.7.1"
   },
   "fitbit": {
     "appUUID": "6f99b4c4-3861-4df2-ab82-dffc655afb42",
@@ -16,7 +16,9 @@
     "requestedPermissions": [],
     "buildTargets": [
       "meson",
-      "higgs"
+      "higgs",
+      "gemini",
+      "mira"
     ],
     "i18n": {
       "en": {
